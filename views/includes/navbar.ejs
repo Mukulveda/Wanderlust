@@ -9,15 +9,28 @@
     background-color: #fe424d;
     color: #fff;
   }
-  .search-btn i{
-    display: inline;
-    margin-right: 0.33rem;
-  }
-  .search-inp{
-    border-radius: 25px;
-    padding: 0.5rem 18rem 0.5rem 0.3rem ;
-    font-size: 1rem;
-  }
+  .search-btn {
+    display: flex;
+    align-items: center;  /* Aligns icon and text in the same line */
+    justify-content: center; /* Centers content inside the button */
+    gap: 0.5rem; /* Adds spacing between the icon and text */
+    padding: 0.5rem 1rem; /* Adjusts padding for better appearance */
+}
+
+.search-btn i {
+    margin: 0; /* Removes unnecessary margins */
+    padding: 0; /* Ensures proper alignment */
+    display: inline-block; /* Keeps the icon inline with text */
+}
+.search-inp {
+  padding : 0.5rem 13rem 0.5rem 1rem;
+  border-radius: 25px;
+}
+
+  .search-inp::-webkit-search-cancel-button {
+    display: none;
+}
+
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
@@ -31,10 +44,20 @@
         </div>
 
       <div class="navbar-nav ms-auto">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations">
-          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-        </form>
+        <form class="d-flex" role="search" action="/listings" method="GET">
+          <input class="form-control me-2 search-inp" 
+       type="text" 
+       name="search" 
+       placeholder="Search destinations" 
+       autocomplete="off" 
+       spellcheck="false">
+
+       <button class="btn search-btn" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i> <span>Search</span>
+    </button>
+    
+      </form>
+      
       </div>
 
         <div class="navbar-nav ms-auto">

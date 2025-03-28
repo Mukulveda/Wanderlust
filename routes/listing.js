@@ -10,9 +10,9 @@ const upload = multer({storage});
 
 //Index and Create
 router.route("/")
-.get(wrapAsync(listingController.index))
-.post(isLoggedIn,upload.single("listing[image]"),validateListing, wrapAsync(listingController.createListing)
-);
+    .get(wrapAsync(listingController.index)) // Handles search if query is provided
+    .post(isLoggedIn, upload.single("listing[image]"), validateListing, wrapAsync(listingController.createListing));
+
 
 //New Listing Route 
 router.get("/new",isLoggedIn,listingController.renderNewForm);
