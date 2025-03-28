@@ -1,4 +1,4 @@
-<% layout("/layouts/boilerplate") %>
+<% layout("/layouts/boilerplate") %> 
 
 <style>
    #filters {
@@ -18,9 +18,6 @@
    }
    .filter p {
     font-size: 0.8rem;
-   }
-   .tax-info {
-    display: none;
    }
    .tax-toggle {
     border: 1px solid black;
@@ -99,8 +96,9 @@
                     <div class="card-body">
                         <p class="card-text">
                             <b><%= listing.title %></b> <br>
-                            &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
-                            <i class="tax-info"> &nbsp; &nbsp;+18% GST</i>
+                            ₹ <span class="original-price" data-price="<%= listing.price %>">
+                                <%= listing.price.toLocaleString("en-IN") %>
+                            </span>/night
                         </p>
                     </div>
                 </div>
@@ -114,10 +112,21 @@
 <!-- Toggle Tax Display -->
 <script>
     let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+
     taxSwitch.addEventListener("click", () => {
-        let taxInfo = document.getElementsByClassName("tax-info");
-        for (let info of taxInfo) {
-            info.style.display = info.style.display === "inline" ? "none" : "inline";
+        let priceElements = document.getElementsByClassName("original-price");
+
+        for (let priceElement of priceElements) {
+            let originalPrice = parseFloat(priceElement.getAttribute("data-price")); // Get the original price
+            let newPrice;
+
+            if (taxSwitch.checked) {
+                newPrice = originalPrice * 1.18; // Add 18% GST
+            } else {
+                newPrice = originalPrice; // Revert to original price
+            }
+
+            priceElement.innerText = newPrice.toLocaleString("en-IN", { maximumFractionDigits: 2 });
         }
     });
 </script>
