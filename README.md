@@ -1,62 +1,44 @@
 🌍 Wanderlust
-A full-stack web application inspired by Airbnb, allowing users to explore, add, and review travel destinations.
+Wanderlust is a full-stack web application that allows users to explore, add, and review travel-related listings such as places, hotels, restaurants, and more. It includes secure authentication, location-based map integration, and full CRUD functionality.
 
 🏗️ Architecture (MVC)
-Wanderlust follows the Model-View-Controller (MVC) pattern:
+Wanderlust is structured following the Model-View-Controller (MVC) architecture:
 
-Model (M): Defines the database schema using MongoDB & Mongoose.
-
-View (V): Uses EJS templates for dynamic rendering.
-
-Controller (C): Handles logic with Node.js & Express.
+Model (M): Uses Mongoose to define data models like Listings and Reviews.
+View (V): Built with EJS templates for rendering dynamic web pages.
+Controller (C): Manages application logic using Express.js routes and handlers.
 
 🚀 Features
-🏡 Listings Management: Users can create, edit, and delete listings.
-
-🗺 Interactive Map: All locations are displayed on a map.
-
-📝 Reviews & Ratings: Users can review listings.
-
-🔐 Role-Based Access:
-
-Only the owner of a listing can delete it.
-
-Only the author of a review or the listing owner can delete reviews.
-
-📷 Image Uploads: Users can upload images for listings.
-
-🛡 Authentication & Authorization: Secure user management with Passport.js.
+🧭 Explore Listings: Users can browse all travel listings added by others.
+➕ Create Listings: Authenticated users can add new listings (e.g., hotels, places, restaurants) with title, description, price, location, and image.
+✏️ Edit/Delete Listings: Only the owner of a listing can edit or delete it.
+🔍 Search: Users can search for listings by location or address.
+📍 Map Integration: Each listing location is shown using Mapbox for better visual reference.
+💬 Reviews: Users can add reviews to any listing.
+❌ Delete Reviews: Only the author of a review or the owner of the listing can delete a review.
+🔐 Authentication: Uses Passport.js for login, signup, and session management.
+✨ Flash Messages: Provides success/error messages after actions like login, logout, or CRUD operations.
+☁️ Image Uploads: Uses Cloudinary to store uploaded images for listings.
 
 🛠️ Tech Stack
 Frontend: HTML, CSS, JavaScript, EJS
-
 Backend: Node.js, Express.js
-
 Database: MongoDB, Mongoose
-
 Authentication: Passport.js
-
+Image Hosting: Cloudinary
 Map Integration: Mapbox
+Flash Messages: connect-flash
 
-📸 Screenshots
-Add some screenshots here.
+✅ Use Cases
+A traveler can search and explore new places, hotels, or restaurants.
+A user can post their own listings for travel spots they recommend.
+Users can review places they’ve visited and interact with other users' listings.
+Listing owners maintain full control over their content.
+The app ensures secure user login and data protection with authorization checks.
 
-🏗️ Installation & Setup
-bash
-Copy
-Edit
-# Clone the repository
-git clone https://github.com/Mukulveda/Wanderlust.git
-
-# Navigate to the project folder
-cd Wanderlust
-
-# Install dependencies
-npm install
-
-# Start the server
-npm start
-Visit http://localhost:3000 in your browser.
+📸ScreenShot Of Website
+![Screenshot 2025-04-09 225937](https://github.com/user-attachments/assets/bd68fa73-9210-49ed-8ce2-85d43825aac6)
 
 📜 License
 This project is open-source and available under the MIT License.
+
