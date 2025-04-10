@@ -39,6 +39,5 @@ The app ensures secure user login and data protection with authorization checks.
 📸ScreenShot Of Website
 ![Screenshot 2025-04-09 225937](https://github.com/user-attachments/assets/bd68fa73-9210-49ed-8ce2-85d43825aac6)
 
-📜 License
-This project is open-source and available under the MIT License.
+
 
