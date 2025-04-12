@@ -20,7 +20,7 @@ Controller (C): Manages application logic using Express.js routes and handlers.
 ✨ Flash Messages: Provides success/error messages after actions like login, logout, or CRUD operations.
 ☁️ Image Uploads: Uses Cloudinary to store uploaded images for listings.
 
-🛠️ Tech Stack
+🛠️ Tech Stack:
 Frontend: HTML, CSS, JavaScript, EJS
 Backend: Node.js, Express.js
 Database: MongoDB, Mongoose
