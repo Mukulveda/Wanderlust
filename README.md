@@ -21,7 +21,7 @@ Controller (C): Manages application logic using Express.js routes and handlers.
 ☁️ Image Uploads: Uses Cloudinary to store uploaded images for listings.
 
 🛠️ Tech Stack:
-Frontend: HTML, CSS, JavaScript, EJS
+Frontend:- HTML, CSS, JavaScript, EJS
 Backend: Node.js, Express.js
 Database: MongoDB, Mongoose
 Authentication: Passport.js
